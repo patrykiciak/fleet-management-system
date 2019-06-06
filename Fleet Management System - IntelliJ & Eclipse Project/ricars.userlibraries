@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="Maven: com.microsoft.sqlserver:mssql-jdbc:7.2.1.jre8">
+    <archive path="C:/Users/Patryk/.m2/repository/com/microsoft/sqlserver/mssql-jdbc/7.2.1.jre8/mssql-jdbc-7.2.1.jre8.jar" />
+  </library>
+  <library name="Maven: junit:junit:4.12">
+    <archive path="C:/Users/Patryk/.m2/repository/junit/junit/4.12/junit-4.12.jar" />
+  </library>
+  <library name="Maven: net.sourceforge.jdatepicker:jdatepicker:1.3.2">
+    <archive path="C:/Users/Patryk/.m2/repository/net/sourceforge/jdatepicker/jdatepicker/1.3.2/jdatepicker-1.3.2.jar" />
+  </library>
+  <library name="Maven: org.hamcrest:hamcrest-core:1.3">
+    <archive path="C:/Users/Patryk/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar" />
+  </library>
+  <library name="JavaFX 11">
+    <archive path="D:/Users/Patryk/Documents/lib/javafx-sdk-11.0.1/lib/javafx-swt.jar" />
+    <archive path="D:/Users/Patryk/Documents/lib/javafx-sdk-11.0.1/lib/javafx.base.jar" />
+    <archive path="D:/Users/Patryk/Documents/lib/javafx-sdk-11.0.1/lib/javafx.controls.jar" />
+    <archive path="D:/Users/Patryk/Documents/lib/javafx-sdk-11.0.1/lib/javafx.fxml.jar" />
+    <archive path="D:/Users/Patryk/Documents/lib/javafx-sdk-11.0.1/lib/javafx.graphics.jar" />
+    <archive path="D:/Users/Patryk/Documents/lib/javafx-sdk-11.0.1/lib/javafx.media.jar" />
+    <archive path="D:/Users/Patryk/Documents/lib/javafx-sdk-11.0.1/lib/javafx.swing.jar" />
+    <archive path="D:/Users/Patryk/Documents/lib/javafx-sdk-11.0.1/lib/javafx.web.jar" />
+  </library>
+</eclipse-userlibraries>
+

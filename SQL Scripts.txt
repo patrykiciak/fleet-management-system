@@ -1,0 +1,50 @@
+CREATE TABLE [dbo].[Car](
+	[id] [int] IDENTITY(1,1) NOT NULL UNIQUE,
+	PRIMARY KEY (id),
+	[carManufacturer] [varchar](100) NOT NULL,
+	[model] [varchar](100) NOT NULL,
+	[year] [date] NOT NULL,
+	[numberPlate] [varchar](100) NOT NULL UNIQUE,
+	[insuranceNr] [varchar](100) NOT NULL UNIQUE,
+	[technicalExpirationDate] [date] NOT NULL,
+	[insuranceExpirationDate] [date] NOT NULL)
+GO
+
+CREATE TABLE [dbo].[Driver](
+	[id] [int] IDENTITY(1,1) NOT NULL UNIQUE,
+	PRIMARY KEY (id),
+	[name] [varchar](100) NOT NULL,
+	[surname] [varchar](100) NOT NULL,
+	[address] [varchar](100) NOT NULL,
+	[fatherName] [varchar](100) NOT NULL,
+	[personalNr] [varchar](100) NOT NULL UNIQUE,
+	[idSerialNr] [varchar](100) NOT NULL UNIQUE,
+	[taxationType] [varchar](100) NOT NULL,
+	[bankNumber] [varchar](100) NOT NULL)
+GO
+
+
+CREATE TABLE [dbo].[Earning](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	PRIMARY KEY (id),
+	[driverId] [int] NOT NULL,
+	FOREIGN KEY (driverId) REFERENCES Driver(id),
+	[startDate] [date] NOT NULL,
+	[endDate] [date] NOT NULL,
+	constraint check_dates check (startDate <= endDate),
+	[turnover] [decimal](18, 2) NOT NULL,
+	[isPaid] [bit] NOT NULL)
+GO 
+
+CREATE TABLE [dbo].[CarSwap](
+	[id] [int] IDENTITY(1,1) NOT NULL UNIQUE,
+	PRIMARY KEY (id),
+	[startDate] [date] NOT NULL,
+	[endDate] [date] NOT NULL,
+	constraint chk_CarSwap check (startDate <= endDate),
+	[carId] [int] NOT NULL,
+	FOREIGN KEY (carId) REFERENCES Car(id),
+	[previousDriverId] [int] NOT NULL,
+	FOREIGN KEY (previousDriverId) REFERENCES Driver(id),
+	[currentDriverId] [int] NOT NULL,
+	FOREIGN KEY (currentDriverId) REFERENCES Driver(id))
